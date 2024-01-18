@@ -1,0 +1,24 @@
+<p>list works!</p>
+
+<div class="row mt-5 ">
+
+    <div class="col-3"  *ngFor="let item of _shared.heros">
+
+        <div [ngClass]="{'card p-1': true, 'hight': item.power >= 100 , 'medium': item.power < 100 && item.power >= 50  , 'low' : item.power < 50  } " >
+
+           <div class="card-image">
+               <img class="width-100 m-1" [src]="item.imageUrl" alt="photo" >
+           </div>
+
+           <div class="card-body">
+               <h2> {{item.name}} </h2>
+               <h2> {{item.power}} </h2>
+           </div>
+
+        </div>
+
+    </div>
+
+
+    
+</div>
